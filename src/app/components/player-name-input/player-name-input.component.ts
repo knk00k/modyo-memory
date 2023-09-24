@@ -23,7 +23,7 @@ export class PlayerNameInputComponent implements OnInit {
     if (this.playerName.trim() !== '') {
       this.playerService.setPlayerName(this.playerName);
       console.log('Iniciar el juego para', this.playerName);
-      this.router.navigate(['/game']);
+      this.router.navigateByUrl('/game');
     }
   }
 }
