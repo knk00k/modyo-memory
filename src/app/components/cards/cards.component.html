@@ -1,0 +1,28 @@
+<div class="board">
+  <div class="cards-container">
+    <div class="card" *ngFor="let card of deck; let i = index" (click)="flipCard(i)">
+      <div class="card__inner" [ngClass]="{'card__inner--flipped': isFlipped(i) || isMatched(card)}">
+        <div class="card__front">
+          <img src="assets/img/card-front.png" alt="Card" loading="lazy" width="50px" height="50px">
+        </div>
+        <div class="card__back">
+          <div
+            class="card__image"
+            [style.background-image]="'url(' + card.fields.image.url + ')'"
+            [id]="card.meta.name + (i + 1)"
+            [title]="card.fields.image.title"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal d-none">
+  <button id="congratsModalButton" #congratsModalButton type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#congratsModal">
+    Felicitaciones
+  </button>
+</div>
+
+
+<app-congrats></app-congrats>

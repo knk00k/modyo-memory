@@ -1,23 +1,29 @@
-<h1 class="title text-center mb-5">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1 class="title text-center mb-5">
     Memory match <span class="title__highlight">Modyo</span>
 </h1>
 
 <form action="" (ngSubmit)="onSubmit()">
     <div class="form-user">
         <div class="form-group mb-3">
-            <label class="form-group__label" for="player-name">Player Name*</label>
+            <label class="form-group__label" for="player-name">Nombre de jugador*</label>
             <input 
             class="form-group__input" 
             type="text" id="player-name" 
             name="playerName" 
             [(ngModel)]="playerName" 
             aria-required="true" 
-            aria-label="Player Name" 
+            aria-label="Nombre de jugador" 
             required 
             [disabled]="playerNameFromLocalStorage !== null && playerName !== ''">
         </div>
         <div class="form-action">
-            <button type="submit" class="form-action__button" aria-label="Start the game">Play</button>
+            <button type="submit" class="form-action__button" aria-label="Start the game">Jugar</button>
         </div>
     </div>
 </form>
+        </div>
+    </div>
+</div>

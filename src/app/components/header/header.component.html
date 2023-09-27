@@ -1,0 +1,11 @@
+<h1 class="tilte my-3"> Bienvenido, <span class="title__player">{{ playerName }}</span></h1>
+
+<div class="score-container mb-3">
+    <p class="score__board">
+        <span class="score__hits">Aciertos: </span>
+        {{ getHits() }}
+         - 
+        <span class="score__misses">Errores:</span>
+        {{ getMisses() }}
+    </p>
+</div>

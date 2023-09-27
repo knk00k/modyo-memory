@@ -4,16 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PlayerService {
-  private playerName: string | null = null;
+  private playerName = 'playerName';
 
   constructor() { }
 
   getPlayerName(): string | null {
-    return this.playerName;
+    return localStorage.getItem(this.playerName);
   }
 
   setPlayerName(name: string): void {
-    this.playerName = name;
     localStorage.setItem('playerName', name);
   }
 }

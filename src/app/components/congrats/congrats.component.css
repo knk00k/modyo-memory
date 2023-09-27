@@ -1,0 +1,21 @@
+.modal-title{
+    font-weight: 700;
+    text-align: center;
+    color: #3DC681;
+}
+.modal-message{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #151F38;
+}
+.btn__modyo-success{
+    background-color: #3DC681;
+    border-color: #3DC681;
+    color: #FFF;
+}
+.btn__modyo-success:hover{
+    background-color: #71D5A3;
+    border-color: #71D5A3;
+    color: #FFF;
+}

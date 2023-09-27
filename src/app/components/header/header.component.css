@@ -1,0 +1,31 @@
+.tilte{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #151F38;
+}
+.title__player{
+    color: #3DC681;
+}
+
+.container-score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.score__board{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #151F38;
+}
+
+.score__hits{
+    color: #3DC681;
+}
+.score__misses{
+    color: #EC3E44;
+}
+

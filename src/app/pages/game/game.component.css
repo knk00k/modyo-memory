@@ -1,0 +1,10 @@
+.container-game{
+    background-image: url(../../../assets/img/bg-geometry.png);
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+.container-board{
+    display: flex;
+    justify-content: center;
+}

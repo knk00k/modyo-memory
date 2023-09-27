@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PlayerNameInputComponent } from './player-name-input.component';
 import { PlayerService } from 'src/app/services/player.service';
@@ -17,7 +18,7 @@ describe('PlayerNameInputComponent', () => {
     TestBed.configureTestingModule({
       declarations: [PlayerNameInputComponent],
       imports: [FormsModule, RouterTestingModule.withRoutes([
-        { path: 'game', component: DummyComponent } // Agrega una ruta 'game' con un componente ficticio
+        { path: 'game', component: DummyComponent }
       ])],
       providers: [PlayerService]
     });
@@ -47,6 +48,5 @@ describe('PlayerNameInputComponent', () => {
   
 });
 
-// Componente ficticio para la ruta 'game'
 @Component({ template: '' })
 class DummyComponent {}

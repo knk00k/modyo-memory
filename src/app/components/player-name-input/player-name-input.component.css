@@ -3,11 +3,12 @@
     line-height: 1;
     font-weight: 700;
     color: #151F38;
-    text-shadow: 0px 0px 6px rgba(0,0,0,0.16);
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.20);
 
 }
 .title__highlight{
     color: #3DC681;
+    font-weight: 700;
 }
 
 form{
@@ -23,6 +24,7 @@ form{
     flex-direction: column;
     padding: 1.5rem;
     border: 1px solid #F6F7F7;
+    background-color: #fff;
     border-bottom: 10px solid #3DC681;
     box-shadow: 0 0 48px rgba(0, 0, 0, 0.1);
 }
