@@ -1,5 +1,5 @@
-.tilte{
-    font-size: 4rem;
+.title{
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     color: #151F38;
@@ -16,7 +16,7 @@
 }
 
 .score__board{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
     color: #151F38;
@@ -27,5 +27,14 @@
 }
 .score__misses{
     color: #EC3E44;
+}
+
+@media (min-width: 768px ){
+    .title{
+        font-size: 4rem;
+    }
+    .score__board{
+        font-size: 2rem;
+    }
 }
 

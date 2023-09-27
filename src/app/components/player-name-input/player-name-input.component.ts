@@ -8,21 +8,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./player-name-input.component.css']
 })
 export class PlayerNameInputComponent implements OnInit {
+
+  // Input property to receive the player's name from local storage (if available)
   @Input() playerNameFromLocalStorage: string | null = null;
   playerName: string = '';
 
   constructor(private playerService: PlayerService, private router: Router) { }
 
   ngOnInit(): void {
+    // Initialize the player name with the value from local storage, if available
     if (this.playerNameFromLocalStorage) {
       this.playerName = this.playerNameFromLocalStorage;
     }
   }
 
+  // Method to handle form submission
   onSubmit(): void {
     if (this.playerName.trim() !== '') {
+      // Set the player's name in local storage
       this.playerService.setPlayerName(this.playerName);
-      console.log('Iniciar el juego para', this.playerName);
+      // Redirect to the game page
       this.router.navigateByUrl('/game');
     }
   }

@@ -10,6 +10,7 @@ import { ScoreService } from '../../services/score.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   playerName: string = 'UserName';
 
   constructor(
@@ -19,18 +20,24 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Get the player's name from local storage
     const savedPlayerName = this.playerService.getPlayerName();
+
     if (savedPlayerName) {
+      // Use the saved player's name
       this.playerName = savedPlayerName;
     } else {
+      // If there's no saved player name, navigate back to the home page
       this.router.navigate(['/home']);
     }
   }
 
+  // Method to get the number of hits from the score service
   getHits() {
     return this.scoreService.getHits();
   }
 
+  // Method to get the number of misses from the score service
   getMisses() {
     return this.scoreService.getMisses();
   }

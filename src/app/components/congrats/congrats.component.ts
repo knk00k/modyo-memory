@@ -16,10 +16,14 @@ export class CongratsComponent implements OnInit {
                 private router: Router, ) { }
 
   ngOnInit(): void {
+    // Get the player's name from local storage
     const savedPlayerName = this.playerService.getPlayerName();
+
     if (savedPlayerName) {
+      // Use the saved player's name
       this.playerName = savedPlayerName;
     } else {
+      // If there's no saved player name, navigate back to the home page
       this.router.navigate(['/home']);
     }
   }

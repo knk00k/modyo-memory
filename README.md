@@ -24,9 +24,9 @@ Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 
 1. Clona este repositorio en tu computadora:
 
-    ```
-    git clone https://github.com/knk00k/modyo-memory.git
-    ```
+```
+git clone https://github.com/knk00k/modyo-memory.git
+```
 
 
 2. Navega hasta el directorio del proyecto clonado:

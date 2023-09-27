@@ -29,14 +29,4 @@ describe('ScoreService', () => {
     service.updateMisses(3);
     expect(service.getMisses()).toBe(3);
   });
-
-  it('should reset score', () => {
-    service.updateHits(5);
-    service.updateMisses(3);
-
-    service.resetScore();
-
-    expect(service.getHits()).toBe(0);
-    expect(service.getMisses()).toBe(0);
-  });
 });

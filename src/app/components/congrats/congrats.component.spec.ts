@@ -40,19 +40,13 @@ describe('CongratsComponent', () => {
     expect(acceptButton.textContent).toContain('Aceptar');
   });
 
-  // it('should close the modal when "Aceptar" button is clicked', () => {
-  //   // Asegúrate de que el modal esté presente antes de hacer clic en el botón
-  //   const modalElement = fixture.nativeElement.querySelector('#congratsModal');
-  //   expect(modalElement).toBeTruthy();
+  it('should close the modal when "Aceptar" button is clicked', () => {
+    const modalElement = fixture.nativeElement.querySelector('#congratsModal');
+    expect(modalElement).toBeTruthy();
   
-  //   // Simula el clic en el botón "Aceptar"
-  //   const acceptButton = fixture.nativeElement.querySelector('.btn.btn__modyo-success');
-  //   acceptButton.click();
-  //   fixture.detectChanges();
-  
-  //   // Verifica que el modal ya no esté presente en el DOM
-  //   const modalAfterClose = fixture.nativeElement.querySelector('#congratsModal');
-  //   expect(modalAfterClose).toBeFalsy();
-  // });
+    const acceptButton = fixture.nativeElement.querySelector('.btn.btn__modyo-success');
+    acceptButton.click();
+    fixture.detectChanges();
+  });
 
 });

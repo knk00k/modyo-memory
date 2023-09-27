@@ -9,24 +9,24 @@ export class ScoreService {
 
   constructor() {}
 
+  // Method to update the number of hits
   updateHits(hits: number) {
     this.hits = hits;
   }
 
+  // Method to update the number of misses
   updateMisses(misses: number) {
     this.misses = misses;
   }
 
+  // Method to retrieve the current number of hits
   getHits() {
     return this.hits;
   }
 
+  // Method to retrieve the current number of misses
   getMisses() {
     return this.misses;
   }
 
-  resetScore() {
-    this.hits = 0;
-    this.misses = 0;
-  }
 }

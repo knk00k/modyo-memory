@@ -14,6 +14,7 @@ export class AnimalService {
 
   constructor( private http: HttpClient ) { }
 
+  // Method to retrieve animal images from the API
   getAnimalImages(): Observable<AnimalResponse> {
     return this.http.get<AnimalResponse>(this.apiUrl)
   }

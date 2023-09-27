@@ -10,23 +10,28 @@ import { ScoreService } from '../../services/score.service';
 })
 export class CardsComponent implements OnInit {
 
+  // Use ViewChild to get a reference to the congratulations modal button
   @ViewChild('congratsModalButton') congratsModalButton!: ElementRef;
 
+  // EventEmitter to emit events when a card is clicked
   cardClicked = new EventEmitter<number>();
 
   deck: Entry[] = [];
   matchedCards: Entry[] = [];
   flippedCards: boolean[] = [];
 
+  // Use ViewChild to get a reference to the congratulations modal button
   modalButton = document.getElementById('congratsModalButton');
   
   constructor(  private animalService: AnimalService,
                 private scoreService: ScoreService  ) {}
 
   ngOnInit(): void {
+    // Load animal images when initializing the component
     this.loadAnimalImages();
   }
 
+  // Method to load animal images from the service
   loadAnimalImages() {
     this.animalService.getAnimalImages().subscribe(
       (data: AnimalResponse) => {
@@ -34,6 +39,7 @@ export class CardsComponent implements OnInit {
         const shuffleCards = this.shuffleArray(cards);
         const cardsToPlay = shuffleCards.slice(0, 10);
 
+        // Duplicate the cards and then shuffle them
         this.deck = cardsToPlay.concat(cardsToPlay);
         this.deck = this.shuffleArray(this.deck);
 
@@ -44,6 +50,7 @@ export class CardsComponent implements OnInit {
     );
   }
 
+  // Method to shuffle an array
   shuffleArray(array: any[]): any[] {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -53,6 +60,7 @@ export class CardsComponent implements OnInit {
     return shuffledArray;
   }
 
+  // Method to handle click on a card
   flipCard(index: number) {
     const flippedCount = this.flippedCards.filter((flipped) => flipped).length;
   
@@ -68,10 +76,12 @@ export class CardsComponent implements OnInit {
     }
   }
 
+  // Method to check if a card is flipped
   isFlipped(index: number): boolean {
     return this.flippedCards[index];
   }
   
+  // Method to check if two cards are a match
   checkForMatch() {
     const flippedIndices = this.flippedCards
       .map((flipped, index) => (flipped ? index : -1))
@@ -82,21 +92,28 @@ export class CardsComponent implements OnInit {
       const card2 = this.deck[flippedIndices[1]];
 
       if (card1.meta.uuid === card2.meta.uuid) {
+
+        // Update the score and add matching cards
         this.scoreService.updateHits(this.scoreService.getHits() + 1);
         this.matchedCards.push(card1, card2);
 
+        // If all cards are matched, open the congratulations modal
         if (this.matchedCards.length === this.deck.length) {
           this.congratsModalButton.nativeElement.click();
         }
 
       } else {
+        
+        // If they don't match, increase the error count
         this.scoreService.updateMisses(this.scoreService.getMisses() + 1);
       }
     }
 
+    // Reset flipped cards
     this.flippedCards = this.flippedCards.map(() => false);
   }
 
+  // Method to check if a card is matched
   isMatched(card: Entry): boolean {
     return this.matchedCards.some((matchedCard) => matchedCard.meta.uuid === card.meta.uuid);
   }
