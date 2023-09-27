@@ -17,7 +17,7 @@ Está construido utilizando Angular y ofrece una experiencia de juego agradable.
 ## Prerrequisitos
 
 Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
-- [Node.js](https://nodejs.org/) installed (se recomienda la versión LTS).
+- [Node.js](https://nodejs.org/) instalado (se recomienda la versión LTS).
 - [Angular CLI](https://cli.angular.io/) instalado de forma global..
 
 ## Instalación
