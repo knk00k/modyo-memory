@@ -36,11 +36,10 @@ export class CardsComponent implements OnInit {
 
         this.deck = cardsToPlay.concat(cardsToPlay);
         this.deck = this.shuffleArray(this.deck);
-        console.log(this.deck);
 
       },
       (error) => {
-        console.error('Error al cargar las imágenes de animales', error);
+        console.error('Error loading animal images: ', error);
       }
     );
   }

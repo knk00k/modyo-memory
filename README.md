@@ -1,27 +1,44 @@
-# ModyoMemory
+# Modyo Memory Match Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.11.
+Bienvenido al Memory Match Game, una aplicación Angular simple y divertida.
 
-## Development server
+## Tabla de contenido
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Descripción](#descripción)
+- [Prerrequisitos](#prerrequisitos)
+- [Instalación](#instalación)
+- [Ejecución de la aplicación](#ejecución-de-la-aplicación)
 
-## Code scaffolding
+## Descripción
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+El Memory Match Game es un juego clásico de emparejamiento de cartas en el que los jugadores deben encontrar pares de cartas con la misma imagen.
+Está construido utilizando Angular y ofrece una experiencia de juego agradable.
 
-## Build
+## Prerrequisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
+- [Node.js](https://nodejs.org/) installed (se recomienda la versión LTS).
+- [Angular CLI](https://cli.angular.io/) instalado de forma global..
 
-## Running unit tests
+## Instalación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona este repositorio en tu máquina local:
 
-## Running end-to-end tests
+    git clone https://github.com/knk00k/modyo-memory.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navega hasta el directorio del proyecto clonado:
 
-## Further help
+    cd memory-match
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Instala las dependencias del proyecto utilizando npm (Node Package Manager).
+   Asegúrate de tener Node.js instalado en tu computadora. Ejecuta el siguiente comando:
+
+    npm install
+
+## Ejecución de la aplicación
+
+Para ejecutar la aplicación localmente, utiliza el siguiente comando:
+
+    ng serve
+
+La aplicación estará disponible en http://localhost:4200/ en tu navegador web.
